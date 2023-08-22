@@ -1,3 +1,10 @@
-package aulaponteiros
+package main
 
-func Main()
+import "fmt"
+
+func main() {
+	var x int = 100
+	var y *int = &x
+
+	fmt.Println(x, *y)
+}
