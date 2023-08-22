@@ -3,8 +3,20 @@ package main
 import "fmt"
 
 func main() {
-	var x int = 100
-	var y *int = &x
+	var testValue string = "João"
+	copyStringVALUE(testValue)
+	fmt.Println(testValue)
 
-	fmt.Println(x, *y)
+	originalStringValue(&testValue)
+	fmt.Println(testValue)
+}
+
+func copyStringVALUE(stringValue string) {
+	stringValue = "TEST"
+	fmt.Println(stringValue)
+}
+
+func originalStringValue(stringValue *string) {
+	*stringValue = "TEST"
+	fmt.Println(*stringValue)
 }
